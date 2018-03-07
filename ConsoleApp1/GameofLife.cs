@@ -102,8 +102,9 @@ namespace ConsoleApplication2
             {
                 this.displayBoard();
                 //System.Threading.Thread.Sleep(20);
-                System.Console.Write("Press ENTER to next generation...");
-                System.Console.ReadLine();
+                System.Console.Write("Press ENTER to next generation...\nPress q and ENTER to exit");
+                string signal = System.Console.ReadLine();
+                if (signal == "q") break;
                 Console.Clear();
 
                 this.DropTheResult();
