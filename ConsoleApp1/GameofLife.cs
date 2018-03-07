@@ -23,12 +23,12 @@ namespace ConsoleApplication2
             {
                 for (int j = 0; j < array.GetLength(1); ++j)
                 {
-                    array[i, j] = rnd.Next(0, 2);
+                    array[i, j] = rnd.Next(0, 2);    //wypelnianie planszy losowo
                 }
             }
         }
 
-        public void displayBoard()
+        public void displayBoard()   //wyswietlanie planszy
         {
             for (int i = 0; i < tmp.GetLength(0); ++i)
             {
@@ -36,7 +36,7 @@ namespace ConsoleApplication2
                 {
                     if(array[i,j] == 0)
                     {
-                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.ForegroundColor = ConsoleColor.Black;  
                     }
                     System.Console.Write(array[i, j]);
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -70,7 +70,7 @@ namespace ConsoleApplication2
                         }
                     }
 
-                    if ((counter < 2 || counter > 3) && array[i, j] == 1)
+                    if ((counter < 2 || counter > 3) && array[i, j] == 1)   //zasady gry 
                         tmp[i, j] = 0;
                     if (counter < 4 && counter > 1 && array[i, j] == 1)
                         tmp[i, j] = 1;
@@ -84,7 +84,7 @@ namespace ConsoleApplication2
             }           
         }
 
-        public void updateChanges()
+        public void updateChanges()     //aktualizowanie glownej tablicy klasy
         {
             for (int i = 0; i < array.GetLength(0); ++i)
             {
@@ -96,7 +96,7 @@ namespace ConsoleApplication2
             }
         }
 
-        public void runTheGame()
+        public void runTheGame()   //glowna petla gry
         {
             while (true)
             {
